@@ -1,0 +1,87 @@
+\documentclass[a4paper,9pt]{article}
+\input{prmb}
+
+\begin{document}
+\begin{table}[h]
+\begin{tabular}{ll}
+{\textbf{UNIVERSIDAD DEL PAC\'IFICO}}&\\ 
+{\textbf{Academic Department of Finance}}&\\ 
+{\textbf{Quantitative Finance (1F0111)}}&\\
+{ \textbf{Second Semester 2017}}&\\
+{ \textbf{Instructor: F. Rosales, TA: J. C\'ardenas}}&\\
+\end{tabular}
+\end{table}
+
+\noindent\rule{16cm}{0.5pt}
+~\\
+\begin{center}
+{\huge Assessment 5}
+\end{center}
+\vspace{0.5cm}
+
+\textit{Instructions: 
+\begin{enumerate}
+\item Select one (and only one) of the following questions and answer it thoroughly. 
+\item To submit your answer you must commit a folder with your student ID to \\ \url{https://github.com/franciscorosales-marticorena/QuantFin/Sol}. 
+\item The deadline to commit your work is  14.11.2017 at 11:30, i.e. you have 24 hours.
+\item If you would like to add text to further explain your results, you can add a \texttt{Read Me} file. 
+\item Note that the information of your \texttt{commit} is public, this means we can all see your output.  
+\item Auxiliary material has been uploaded at \\ \url{https://github.com/franciscorosales-marticorena/QuantFin/Aux}. 
+\end{enumerate}
+}
+\vspace{0.5cm}
+
+\begin{enumerate}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%Q 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \textbf{Cryptocurrencies} \hfill (20pts)\\
+	~\\
+	In class we learned how to create the cryptocurrency CiupCoin. Now we ask you to customize some aspects of it to make it your own. Namely, you must change
+	\begin{enumerate}
+	\item   the name of the currency from  CiupCoin to a name of your choice, e.g. XCoin. 
+	\item   the reward from 10 to 13 XCoins. 
+	\item  the number of confirmations per block from 3 to 5. 
+	\end{enumerate}
+	To verify that you were successful, take screenshots of your results after executing
+	\begin{enumerate}
+	\item  \begin{verbatim}make -f makefile.unix &\end{verbatim} 
+	\item  \begin{verbatim}./XCoin &\end{verbatim}
+	\item  \texttt{./XCoin sendtoaddress xyz 1}, where xyz is the public key corresponding to an account in your second virtual machine. 
+	\end{enumerate}	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%Q 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \textbf{Algorithmic Trading} \hfill (20pts)\\
+	\begin{enumerate}
+	\item Consider the MSFT time series from 1.11.2006 to 25.11.2016 and write an R script to replicate regression-based  trading approach suggested in class. To show that you were successful compare: %at \texttt{Trading Algorithm.ipynb}. 
+	\begin{enumerate}
+	\item the partial results from running each function
+	\item the resulting confusion matrix 
+	\end{enumerate}
+	If the results are not identical, provide a detailed explanation and illustrate your arguments using computational examples/counter-examples. 
+	\item  Solve the dynamic Markowitz portfolio problem:
+	\beqn
+	\omegavec_{\mbox{\small Q}}=\argmax_\omegavec\left\{\hat\muvec^\top\omegavec-\frac{\gamma}{2}\omegavec^\top\hat\mSigma\omegavec: \onevec^\top\omegavec=1\right\},
+	\eeqn
+	using the constant conditional correlation (CCC) model for  risky assets:
+	\begin{itemize}
+	\item EEM: Ishares Msci Emerging Markets
+	\item EFA: Ishares Msci Eafe Index Fund
+	\item EWJ: iShares MSCI Japan Index Fund
+	\item IEF: Ishares Lehman 7 10 Year Treasury Bond Fund
+	\item IEV: iShares SAndP Europe 350 Index Fund
+	\item IVV: iShares SAndP 500 Index Fund
+	\item RWR: DJ Wilshire REIT ETF
+	\item SHY: Ishares Lehman 1 3 Year Treasury Bond Fund
+	\item TIP: Ishares Lehman Tips Bond Fund
+	\item TLT: Ishares Lehman 20 Year Treasury Bond Fund
+	\item VTI: Vanguard Total Stock Market ETF
+	\end{itemize}
+	Report a matrix of weights (11 rows) from 1.11.2007 to 25.11.2016 reporting your results 
+	 \item Apply your results in (a) to each individual asset in (b).  Provide ideas on how to use the information from the algorithmic trading methods to improve your Markowitz results.
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
